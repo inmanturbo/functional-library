@@ -1,6 +1,6 @@
 {
     "name": "inmanturbo/functional-library",
-    "description": "create closure libraries with ease for functional programming with php",
+    "description": "create Closure libraries with ease for functional programming with php",
     "keywords": [
         "inmanturbo",
         "functional-library"
