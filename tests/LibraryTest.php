@@ -34,8 +34,8 @@ class ExampleLibrary
     public static function closures(): array
     {
         return [
-            'addOne' => fn(int $number): int => $number + 1,
-            'addTwo' => fn(int $number): int => $number + 2,
+            'addOne' => fn (int $number): int => $number + 1,
+            'addTwo' => fn (int $number): int => $number + 2,
         ];
     }
 }

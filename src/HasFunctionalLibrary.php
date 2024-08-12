@@ -4,7 +4,6 @@ namespace Inmanturbo\FunctionalLibrary;
 
 trait HasFunctionalLibrary
 {
-
     /**
      * @return mixed[]
      */
