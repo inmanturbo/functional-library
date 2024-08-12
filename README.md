@@ -69,7 +69,7 @@ expect($addOne(0))->toBe(1);
 expect($addTwo(0))->toBe(2);
 ```
 
-Now you can put your anonymous functions into scoped static libraries and find them using static analysis by their named arguments, or by inspecting the `closure()` method's return value.
+Now you can put your anonymous functions into scoped static libraries and find them using static analysis by their named arguments, or by inspecting the `closures()` method's return value.
 
 ## Testing
 
