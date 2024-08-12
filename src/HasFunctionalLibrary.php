@@ -30,12 +30,10 @@ trait HasFunctionalLibrary
         $options = [];
 
         foreach ($parameters as $index => $param) {
-            match(true) {
-                isset($args[$index]) 
-                    => $options[$param->getName()] = $args[$index],
-                default
-                    => $options[$param->getName()] = $param->isDefaultValueAvailable() 
-                    ? $param->getDefaultValue() 
+            match (true) {
+                isset($args[$index]) => $options[$param->getName()] = $args[$index],
+                default => $options[$param->getName()] = $param->isDefaultValueAvailable()
+                    ? $param->getDefaultValue()
                     : null,
             };
         }

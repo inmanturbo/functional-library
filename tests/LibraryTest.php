@@ -17,7 +17,8 @@ test('it can make a library', function () {
     expect($addTwo(0))->toBe(2);
 });
 
-class Library {
+class Library
+{
     use HasFunctionalLibrary;
 
     public static function library(bool $addOne = false, bool $addTwo = false)
@@ -28,12 +29,12 @@ class Library {
     public static function closures(): array
     {
         return [
-            'addOne' => function(int $number): int {
+            'addOne' => function (int $number): int {
                 return $number + 1;
             },
-            'addTwo' => function(int $number): int {
+            'addTwo' => function (int $number): int {
                 return $number + 2;
-            }
+            },
         ];
     }
 }
