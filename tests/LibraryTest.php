@@ -2,16 +2,21 @@
 
 use Inmanturbo\FunctionalLibrary\HasFunctionalLibrary;
 
-test('it can make a library', function () {
+test('it can make a library', function (): void {
     [$addOne, $addTwo] = Library::library(addOne: true, addTwo: true);
     expect($addOne(0))->toBe(1);
     expect($addTwo(0))->toBe(2);
 
-    // Testing with a single option
+    [$addOne, $addTwo] = Library::getLibrary(...[true, true]);
+
+    expect($addOne(0))->toBe(1);
+    expect($addTwo(0))->toBe(2);
+
+    // Test a single option
     $addOne = Library::library(addOne: true);
     expect($addOne(0))->toBe(1);
 
-    // Testing with no options (should return all available options)
+    // Test no options (should return all available options)
     [$addOne, $addTwo] = Library::library();
     expect($addOne(0))->toBe(1);
     expect($addTwo(0))->toBe(2);
@@ -29,12 +34,8 @@ class Library
     public static function closures()
     {
         return [
-            'addOne' => function (int $number): int {
-                return $number + 1;
-            },
-            'addTwo' => function (int $number): int {
-                return $number + 2;
-            },
+            'addOne' => fn(int $number): int => $number + 1,
+            'addTwo' => fn(int $number): int => $number + 2,
         ];
     }
 }
