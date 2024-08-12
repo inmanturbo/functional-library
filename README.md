@@ -16,8 +16,8 @@ composer require inmanturbo/functional-library
 
 ## Usage
 
-To create a library you can use the `HasFunctionalLibrary`, then you just have to implement
-a static library method with name bool parameters for your available functions.
+To create a library you can use the `HasFunctionalLibrary` trait, then you just have to implement
+a static library method with named bool parameters for your available functions.
 
 You then call `static::getLibrary` with all your parameters as its `args`.
 
