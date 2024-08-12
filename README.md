@@ -50,7 +50,7 @@ class ExampleLibrary
 
 ## Example Usage
 
-The above example creates the folowing testable api (using pest):
+The above example creates the following testable api (using pest):
 
 ```php
 [$addOne, $addTwo] = ExampleLibrary::library(addOne: true, addTwo: true);
