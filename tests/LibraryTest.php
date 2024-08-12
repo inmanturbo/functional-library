@@ -26,7 +26,7 @@ class Library
         return static::getLibrary($addOne, $addTwo);
     }
 
-    public static function closures(): array
+    public static function closures()
     {
         return [
             'addOne' => function (int $number): int {
