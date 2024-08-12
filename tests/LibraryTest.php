@@ -31,7 +31,7 @@ class ExampleLibrary
         return static::getLibrary($addOne, $addTwo);
     }
 
-    public static function closures()
+    public static function closures(): array
     {
         return [
             'addOne' => fn(int $number): int => $number + 1,

@@ -5,7 +5,10 @@ namespace Inmanturbo\FunctionalLibrary;
 trait HasFunctionalLibrary
 {
 
-    public static function options(array $options)
+    /**
+     * @return mixed[]
+     */
+    public static function options(array $options): array
     {
         $closures = static::closures();
         $result = [];
