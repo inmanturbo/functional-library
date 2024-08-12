@@ -3,26 +3,26 @@
 use Inmanturbo\FunctionalLibrary\HasFunctionalLibrary;
 
 test('it can make a library', function (): void {
-    [$addOne, $addTwo] = Library::library(addOne: true, addTwo: true);
+    [$addOne, $addTwo] = ExampleLibrary::library(addOne: true, addTwo: true);
     expect($addOne(0))->toBe(1);
     expect($addTwo(0))->toBe(2);
 
-    [$addOne, $addTwo] = Library::getLibrary(...[true, true]);
+    [$addOne, $addTwo] = ExampleLibrary::getLibrary(...[true, true]);
 
     expect($addOne(0))->toBe(1);
     expect($addTwo(0))->toBe(2);
 
     // Test a single option
-    $addOne = Library::library(addOne: true);
+    $addOne = ExampleLibrary::library(addOne: true);
     expect($addOne(0))->toBe(1);
 
     // Test no options (should return all available options)
-    [$addOne, $addTwo] = Library::library();
+    [$addOne, $addTwo] = ExampleLibrary::library();
     expect($addOne(0))->toBe(1);
     expect($addTwo(0))->toBe(2);
 });
 
-class Library
+class ExampleLibrary
 {
     use HasFunctionalLibrary;
 
