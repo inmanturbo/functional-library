@@ -4,10 +4,8 @@ namespace Inmanturbo\FunctionalLibrary;
 
 trait HasFunctionalLibrary
 {
-    /**
-     * @return mixed[]
-     */
-    public static function options(array $options): array
+
+    public static function options(array $options)
     {
         $closures = static::closures();
         $result = [];
@@ -25,7 +23,7 @@ trait HasFunctionalLibrary
 
     abstract public static function library();
 
-    public static function getLibrary(...$args): mixed
+    public static function getLibrary(...$args)
     {
         $reflection = new \ReflectionMethod(self::class, 'library');
         $parameters = $reflection->getParameters();

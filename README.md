@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/inmanturbo/functional-library/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/inmanturbo/functional-library/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/inmanturbo/functional-library.svg?style=flat-square)](https://packagist.org/packages/inmanturbo/functional-library)
 
-This package makes it easy to export and autoload a library of anonymous functions or collections of anonymous functions using composer, with some helpful static analysis.
+This package makes it easy to export and autoload a library of anonymous functions or collections of anonymous functions using composer.
 
 ## Installation
 
@@ -68,6 +68,8 @@ expect($addOne(0))->toBe(1);
 expect($addOne(0))->toBe(1);
 expect($addTwo(0))->toBe(2);
 ```
+
+Now you can put your `helper` functions into scoped libraries and find them using static analysis by their named arguments.
 
 ## Testing
 
