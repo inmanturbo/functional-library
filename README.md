@@ -35,7 +35,7 @@ class ExampleLibrary
 
     public static function library(bool $addOne = false, bool $addTwo = false)
     {
-        return static::getLibrary($addOne, $addTwo);
+        return static::getLibrary(...func_get_args());
     }
 
     public static function closures()
